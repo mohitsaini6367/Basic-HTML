@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Website title shown in browser tab -->
+    <title>Xiyo Yan - Animated Website</title>
+
+    <!-- CSS starts here -->
+    <style>
+
+        /* Main body design */
+        body {
+            margin: 0;
+            font-family: Arial;
+            text-align: center;
+            background: black;
+            color: white;
+
+            /* Apply animated background */
+            animation: bgColor 8s infinite;
+        }
+
+        /* Background color animation */
+        @keyframes bgColor {
+            0% { background: black; }
+            25% { background: darkred; }
+            50% { background: darkgreen; }
+            75% { background: black; }
+            100% { background: darkred; }
+        }
+
+        /* Main heading design */
+        h1 {
+            color: white;
+
+            /* Apply glowing effect */
+            animation: glow 2s infinite alternate;
+        }
+
+        /* Heading glow animation */
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px white;
+            }
+
+            to {
+                text-shadow: 0 0 20px red,
+                             0 0 30px green;
+            }
+        }
+
+        /* Information card design */
+        .box {
+            background: white;
+            color: black;
+            padding: 20px;
+            margin: 30px auto;
+            width: 70%;
+            border-radius: 15px;
+
+            /* Apply floating animation */
+            animation: move 3s infinite alternate;
+        }
+
+        /* Floating card animation */
+        @keyframes move {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Button design */
+        button {
+            background: red;
+            color: white;
+            padding: 12px 25px;
+            border: 2px solid white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background: green;
+            transform: scale(1.1);
+        }
+
+        /* List item spacing */
+        li {
+            margin: 10px;
+        }
+
+    </style>
+    <!-- CSS ends here -->
+
+</head>
+
+<body>
+
+    <!-- Main website heading -->
+    <h1>WELCOME TO XIYO YAN</h1>
+
+    <!-- First information card -->
+    <div class="box">
+
+        <h2>My Introduction</h2>
+
+        <!-- Personal information -->
+        <p>Hello! My name is Xiyo Yan.</p>
+        <p>I am a Computer Science Engineering student.</p>
+
+    </div>
+
+    <!-- Second information card -->
+    <div class="box">
+
+        <h2>My Hobbies</h2>
+
+        <!-- Unordered list -->
+        <ul>
+            <li>Learning Coding</li>
+            <li>Playing Games</li>
+            <li>Watching Movies</li>
+        </ul>
+
+    </div>
+
+    <!-- Button with JavaScript alert -->
+    <button onclick="alert('Welcome Xiyo Yan!')">
+        CLICK ME
+    </button>
+
+</body>
+</html>
