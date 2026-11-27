@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Website</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #000000, #171717);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 550px;
+    padding: 40px 25px;
+    text-align: center;
+    background: #111;
+    border: 2px solid #ff2525;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ff252555;
+    animation: glow 3s infinite alternate;
+}
+
+h1 {
+    font-size: 38px;
+    color: #ff3030;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px red;
+}
+
+p {
+    color: #eeeeee;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+button {
+    padding: 14px 30px;
+    border: 2px solid #00ff66;
+    border-radius: 30px;
+    background: #00a844;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00ff66;
+    color: black;
+    box-shadow: 0 0 25px #00ff66;
+    transform: scale(1.1);
+}
+
+#message {
+    margin-top: 25px;
+    color: #00ff66;
+    font-size: 20px;
+    min-height: 28px;
+}
+
+.circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 5s infinite alternate;
+    pointer-events: none;
+}
+
+.one {
+    background: red;
+    top: 10%;
+    left: 10%;
+}
+
+.two {
+    background: #00ff66;
+    bottom: 10%;
+    right: 10%;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px red;
+    }
+    to {
+        box-shadow: 0 0 30px #00ff66;
+    }
+}
+
+@keyframes float {
+    to {
+        transform: translate(50px, 40px);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="circle one"></div>
+<div class="circle two"></div>
+
+<div class="container">
+
+    <h1>Hello, World! ✨</h1>
+
+    <p>
+        Welcome to my creative website.
+        Explore something new, enjoy the animations
+        and make every moment interesting!
+    </p>
+
+    <button onclick="showMessage()">
+        Click Me 🚀
+    </button>
+
+    <div id="message"></div>
+
+</div>
+
+<script>
+function showMessage() {
+
+    const messages = [
+        "Keep Learning! 🌟",
+        "Dream Big! 🚀",
+        "Build Something Amazing! 💻",
+        "Never Give Up! 🔥"
+    ];
+
+    let random = Math.floor(Math.random() * messages.length);
+
+    document.getElementById("message").innerHTML =
+        messages[random];
+}
+</script>
+
+</body>
+</html>
